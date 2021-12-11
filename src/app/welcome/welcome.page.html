@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dashboard
+    </ion-title>
+   
+    <ion-button type="submit" color="danger" slot="end" size="small" (click)="signOut()">
+      Sign Out
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-img  src="assets/images/logo.jpeg"></ion-img>
+  <ion-grid>
+    <ion-row>
+      <!-- <ion-col text-center>
+        Welcome !
+
+        <p>User email : <strong>{{ userDetail }}</strong></p>
+      </ion-col> -->
+    </ion-row>
+
+    
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-button [routerLink]="['/products/']" color="secondary" ion-button full>
+          Products
+        </ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button [routerLink]="['/maintenance/']" color="warning" ion-button full>
+          Maintenance
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid >
+   
+  </ion-grid>
+
+  
+</ion-content>

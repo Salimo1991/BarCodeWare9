@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="warning">Maintenance</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6"  class="user-list">
+
+        <ion-text color="primary">
+          Hello from the Maintenance Team.
+        
+        Our team fixes and repair all kinds of 
+        printers.
+        
+        Please tell us more about your printer:
+        </ion-text>
+
+
+       
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list lines="full">
+    <form [formGroup]="maintForm" (ngSubmit)="formSubmit()">
+
+
+      <ion-item>
+        <ion-label position="floating" color="primary">Name</ion-label>
+        <ion-input formControlName="name" type="text" required >
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary">Brand</ion-label>
+        <ion-select formControlName="brand" >
+          <ion-select-option value="LPQ85">HPRT</ion-select-option>
+          <ion-select-option value="SL43">X Printer</ion-select-option>
+          <ion-select-option value="XP-370BM">Honeywell</ion-select-option>
+          <ion-select-option value="I-Class Mark II">Zebra</ion-select-option>
+        </ion-select>
+      </ion-item> 
+
+     
+      <ion-item>
+        <ion-label color="primary">Model</ion-label>
+        <ion-select formControlName="model" >
+          <ion-select-option value="LPQ85">LPQ85</ion-select-option>
+          <ion-select-option value="SL43">SL43</ion-select-option>
+          <ion-select-option value="XP-370BM">XP-370BM</ion-select-option>
+          <ion-select-option value="I-Class Mark II">I-Class Mark II</ion-select-option>
+          <ion-select-option value="GT800">GT800</ion-select-option>
+          <ion-select-option value="HM-T3">HM-T3</ion-select-option>
+        </ion-select>
+      </ion-item> 
+
+    
+
+    <ion-item>
+      <ion-label color="primary">Year</ion-label>
+      <ion-select interface="popover"  okText="Okay" cancelText="Cancel" formControlName="year">
+        <ion-select-option value="2021">2021</ion-select-option>
+        <ion-select-option value="2020">2020</ion-select-option>
+        <ion-select-option value="2019">2019</ion-select-option>
+        <ion-select-option value="2018">2018</ion-select-option>
+        <ion-select-option value="2017">2017</ion-select-option>
+        <ion-select-option value="2016">2016</ion-select-option>
+        <ion-select-option value="2015">2015</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Phone Number</ion-label>
+      <ion-input formControlName="phone" type="text" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-item>
+        <!-- <ion-label position="stacked" color="primary">Enter your description message below</ion-label> -->
+        <ion-textarea  placeholder="Enter more information here..." rows="6" formControlName="description" type="text" required required></ion-textarea>
+      </ion-item>
+    </ion-item>
+      
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="warning" shape="full" expand="block">Submit Request</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

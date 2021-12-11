@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form class="form" [formGroup]="userForm" (ngSubmit)="signUp(userForm.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Password</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" >Sign Up</ion-button>
+    
+    <label class="ion-text-center" color="danger">{{errorMsg}}</label>
+    <label class="ion-text-center" color="success">{{successMsg}}</label>
+  </form>
+  <p class="ion-text-center">Already registered? <a (click)="goToLogin()">Login</a></p>
+</ion-content>
+
